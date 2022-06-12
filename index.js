@@ -10,6 +10,7 @@ const http = require("http");
 // const { parse } = require("path");
 const { handleReqRes } = require("./helpers/handleReqRes");
 const environment = require("./helpers/environment");
+const data = require("./lib/data");
 
 // app object -model scaffolding
 const app = {};

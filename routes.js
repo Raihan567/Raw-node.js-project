@@ -5,11 +5,14 @@
  * Date: 11-06-2022
  */
 
-const { notFoundHandler } = require("./handlers/routeHandlers/notFoundHandler");
 const { sampleHandler } = require("./handlers/routeHandlers/sampleHandlers");
+const {} = require("./handlers/routeHandlers/userHandler");
 
+// Route setup
 const routes = {
   sample: sampleHandler,
+  user: userHandler,
 };
 
+// Exports module
 module.exports = routes;

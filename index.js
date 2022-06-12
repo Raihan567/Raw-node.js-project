@@ -9,20 +9,18 @@
 const http = require("http");
 // const { parse } = require("path");
 const { handleReqRes } = require("./helpers/handleReqRes");
+const environment = require("./helpers/environment");
 
 // app object -model scaffolding
 const app = {};
 
 // configuration
-app.config = {
-  port: 3000,
-};
 
 // create server
 app.createServer = () => {
   const server = http.createServer(app.handleReqRes);
-  server.listen(app.config.port, () => {
-    console.log(`Listing to port no ${app.config.port}`);
+  server.listen(environment.port, () => {
+    console.log(`Listing to port no ${environment.port}`);
   });
 };
 
